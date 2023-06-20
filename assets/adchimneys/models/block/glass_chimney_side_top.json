@@ -1,8 +1,0 @@
-{
-	"parent": "adchimneys:block/metal_chimney_side_top",
-	"textures": {
-		"0": "minecraft:block/glass",
-		"1": "adchimneys:block/glass_chimney_top",
-		"particle": "adchimneys:block/glass_chimney"
-	}
-}
