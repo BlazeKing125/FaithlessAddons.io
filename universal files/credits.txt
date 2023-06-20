@@ -1,0 +1,35 @@
+
+This pack is intended to be enabled ABOVE faithless in order to fix most mod issues and add a few mod texture support
+
+
+there are some mods which can not be fixed with an overlay pack such as this and will need to modify the MAIN pack by deleting some files
+
+
+----------------------------------------------------------
+
+Some mods with known issues:
+
+- DASHLOADER
+Is known to sometimes cause audio to cut out, sometimes temporarily, sometimes entirely. 
+The only solution is to disable this mod, or delete these files in the main pack:
+
+Faithless\assets\minecraft\sounds.json
+Faithless\assets\minecraft\sounds (entire folder)
+
+----------------------------------------------------------
+
+- CUSTOM ENTITY MODELS (aka CEM)
+Is known to cause entities to break due to the mob models designed for Optifine's format
+The only potential solution is to use this mod: 
+
+Entity Texture Features: https://www.curseforge.com/minecraft/mc-mods/entity-model-features
+
+or delete these files in the main pack:
+
+Faithless\assets\minecraft\optifine\ctm (entire folder)
+
+----------------------------------------------------------
+
+Not mod related, but a known issue with Optifine. 
+If your game is lagging with CTM enabled and DYNAMIC LIGHTING, you will need to disable one or the other. 
+There is no known solution otherwise.
