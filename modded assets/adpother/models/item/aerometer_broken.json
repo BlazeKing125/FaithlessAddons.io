@@ -1,0 +1,6 @@
+{
+	"parent": "adpother:item/aerometer",
+	"textures": {
+		"layer0": "adpother:item/aerometer_broken"
+	}
+}
