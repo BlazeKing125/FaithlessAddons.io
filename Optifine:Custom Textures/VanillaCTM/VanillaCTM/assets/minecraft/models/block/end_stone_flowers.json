@@ -1,6 +1,0 @@
-{
-	"parent": "block/end_stone",
-	"textures": {
-		"7": "block/chorus_grass_flowering"
-	}
-}

@@ -1,6 +1,0 @@
-{
-    "parent": "item/totem_of_undying",
-	"textures": {
-		"lantern": "item/totem_of_undying_ibxtoycat"
-	}
-}

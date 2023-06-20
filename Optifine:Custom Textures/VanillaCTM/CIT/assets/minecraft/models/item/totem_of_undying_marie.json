@@ -1,6 +1,0 @@
-{
-    "parent": "item/totem_of_undying_qbert",
-	"textures": {
-		"lantern": "item/totem_of_undying_marie"
-	}
-}
