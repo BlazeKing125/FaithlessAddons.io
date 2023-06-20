@@ -52,6 +52,14 @@
             background-color: #f1f1f1;
         }
     </style>
+    <script>
+        function downloadFile(url) {
+            var link = document.createElement('a');
+            link.href = url;
+            link.download = url.split('/').pop();
+            link.click();
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -70,12 +78,12 @@
                 <div class="dropdown">
                     <a href="#">Faithless Enhancements</a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="downloadFile('https://github.com/BlazeKing125/FaithlessAddons.io/raw/main/Enhancements:Changes/CIT.zip')">CIT</a>
-                        <a href="https://github.com/your-username/repository/tree/main/Enhancements/Changes/consistency.zip" download>Consistency</a>
-                        <a href="https://github.com/your-username/repository/tree/main/Enhancements/Changes/halloween.zip" download>Halloween</a>
-                        <a href="https://github.com/your-username/repository/tree/main/Enhancements/Changes/ogtextures.zip" download>OGTextures</a>
-                        <a href="https://github.com/your-username/repository/tree/main/Enhancements/Changes/tlou.zip" download>TLoU</a>
-                        <a href="https://github.com/your-username/repository/tree/main/Enhancements/Changes/vanillactm.zip" download>VanillaCTM</a>
+                        <a href="#" onclick="downloadFile('https://github.com/BlazeKing125/FaithlessAddons.io/raw/main/Enhancements/Changes/CIT.zip')">CIT</a>
+                        <a href="#" onclick="downloadFile('https://github.com/your-username/repository/raw/main/Enhancements/Changes/consistency.zip')">Consistency</a>
+                        <a href="#" onclick="downloadFile('https://github.com/your-username/repository/raw/main/Enhancements/Changes/halloween.zip')">Halloween</a>
+                        <a href="#" onclick="downloadFile('https://github.com/your-username/repository/raw/main/Enhancements/Changes/ogtextures.zip')">OGTextures</a>
+                        <a href="#" onclick="downloadFile('https://github.com/your-username/repository/raw/main/Enhancements/Changes/tlou.zip')">TLoU</a>
+                        <a href="#" onclick="downloadFile('https://github.com/your-username/repository/raw/main/Enhancements/Changes/vanillactm.zip')">VanillaCTM</a>
                     </div>
                 </div>
             </div>
