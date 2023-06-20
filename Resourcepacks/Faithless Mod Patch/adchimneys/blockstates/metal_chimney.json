@@ -1,0 +1,28 @@
+{
+  "multipart": [
+	{ "when": { "north": "true", "part": "pipe" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side", "uvlock": true }
+    },
+	{ "when": { "east": "true", "part": "pipe" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side", "uvlock": true, "y": 90 }
+    },
+	{ "when": { "south": "true", "part": "pipe" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side", "uvlock": true, "y": 180 }
+    },
+	{ "when": { "west": "true", "part": "pipe" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side", "uvlock": true, "y": 270 }
+    },
+	{ "when": { "north": "true", "part": "top" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side_top", "uvlock": true }
+    },
+	{ "when": { "east": "true", "part": "top" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side_top", "uvlock": true, "y": 90 }
+    },
+	{ "when": { "south": "true", "part": "top" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side_top", "uvlock": true, "y": 180 }
+    },
+	{ "when": { "west": "true", "part": "top" },
+	  "apply": { "model": "adchimneys:block/metal_chimney_side_top", "uvlock": true, "y": 270 }
+    }
+  ]
+}
