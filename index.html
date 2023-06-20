@@ -5,57 +5,76 @@
     <style>
         /* CSS styling for the page */
         /* ... */
+
+        .ribbon {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <h1>Minecraft Resource Pack Selector</h1>
+    <p>Welcome to the Minecraft Resource Pack Selector website. Here, you can customize and download various resource packs for your Minecraft experience.</p>
 
-    <form id="resourcePackForm">
-        <label>
-            <input type="checkbox" name="texturePack" value="textures" /> Textures
-        </label>
-        <br />
-        <label>
-            <input type="checkbox" name="soundPack" value="sounds" /> Sounds
-        </label>
-        <!-- Add more checkboxes for other parts of the resource pack -->
-        <br />
+    <div class="ribbon">
+        <div class="dropdown">
+            <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">Faithless</a>
+            <div class="dropdown-content">
+                <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">CurseForge</a>
+                <a href="https://modrinth.com/resourcepack/faithless">Modrinth</a>
+            </div>
+        </div>
 
-        <button type="submit">Download</button>
-    </form>
+        <div class="dropdown">
+            <a href="#">Faithless Enhancements</a>
+            <div class="dropdown-content">
+                <a href="#">CIT</a>
+                <a href="#">Consistency</a>
+                <a href="#">Halloween</a>
+                <a href="#">OGTextures</a>
+                <a href="#">TLoU</a>
+                <a href="#">VanillaCTM</a>
+            </div>
+        </div>
+
+        <a href="#">ModdedAssets</a>
+    </div>
+
+    <!-- Rest of your website content -->
 
     <script>
-        // JavaScript code to handle form submission
-        document.getElementById("resourcePackForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+        // JavaScript code to handle dropdown functionality
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function(event) {
+                event.stopPropagation();
+                this.classList.toggle('active');
+                const dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+        });
 
-            // Collect the selected values
-            const form = new FormData(document.getElementById("resourcePackForm"));
-            const selectedOptions = Array.from(form.entries())
-                .filter(entry => entry[1] === "on")
-                .map(entry => entry[0]);
-
-            // Perform further processing, such as making an AJAX request to the server-side script
-            // with the selectedOptions data to generate the customized resource pack and initiate the download.
-            // You'll need to implement this part on the server-side.
-
-            // Example: Make an AJAX request to the server-side script using fetch()
-            fetch("generate-resource-pack.php", {
-                method: "POST",
-                body: JSON.stringify(selectedOptions),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Process the response or initiate the download
-                } else {
-                    // Handle error response
-                }
-            })
-            .catch(error => {
-                // Handle fetch error
+        window.addEventListener('click', function() {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                dropdownContent.style.display = 'none';
             });
         });
     </script>
