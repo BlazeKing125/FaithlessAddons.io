@@ -1,7 +1,0 @@
-{
-	"parent": "adpother:item/diamond_respirator",
-	"textures": {
-		"0": "adpother:item/gold_respirator",
-		"particle": "adpother:item/gold_respirator"
-	}
-}

@@ -1,7 +1,0 @@
-{
-	"parent": "adpother:block/diamond_filter_frame_clean",
-	"textures": {
-		"0": "adpother:block/gold_filter_frame_dirty",
-		"particle": "adpother:block/gold_filter_frame_dirty"
-	}
-}
