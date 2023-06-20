@@ -1,0 +1,8 @@
+{
+  "parent": "adchimneys:block/metal_chimney_inventory",
+	"textures": {
+		"0": "minecraft:block/cobblestone",
+		"1": "adchimneys:block/cobblestone_chimney_top",
+		"particle": "adchimneys:block/cobblestone_chimney"
+	}
+}
