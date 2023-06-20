@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"condition=clean": {
+			"model": "adpother:block/gold_filter_frame_clean"
+		},
+		"condition=dirty": {
+			"model": "adpother:block/gold_filter_frame_dirty"
+		}
+	}
+}

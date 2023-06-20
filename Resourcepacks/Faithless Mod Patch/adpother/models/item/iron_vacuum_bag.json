@@ -1,0 +1,7 @@
+{
+	"parent": "adpother:item/diamond_vacuum_bag",
+	"textures": {
+		"0": "adpother:item/iron_vaccum_bag",
+		"particle": "adpother:item/iron_vaccum_bag"
+	}
+}
