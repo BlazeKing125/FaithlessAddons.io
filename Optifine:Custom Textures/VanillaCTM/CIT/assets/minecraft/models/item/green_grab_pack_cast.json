@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/blue_grab_pack_cast",
+	"textures": {
+		"0": "item/green_grab_pack",
+		"particle": "item/green_grab_pack"
+	}
+}
