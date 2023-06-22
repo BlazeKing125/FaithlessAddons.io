@@ -7,87 +7,130 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
 
         header {
-            background-color: #333;
+            background-color: #303030;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav-bar {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-bar li {
+            margin-right: 20px;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        .ribbon {
+            background-color: #555;
             color: #fff;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 20px;
+            border-radius: 5px;
         }
 
-        .nav-item {
-            display: inline-block;
+        .ribbon-item {
             margin-right: 20px;
         }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #000;
-            padding: 12px 16px;
+        .ribbon-item a {
+            color: #fff;
             text-decoration: none;
-            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
+        .ribbon-item a:hover {
+            background-color: #444;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Minecraft Resource Pack Homepage</h1>
-        <nav>
-            <div class="nav-item">
-                <div class="dropdown">
-                    <a href="#">Faithless</a>
-                    <div class="dropdown-content">
-                        <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">CurseForge</a>
-                        <a href="https://modrinth.com/resourcepack/faithless">Modrinth</a>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-item">
-                <div class="dropdown">
-                    <a href="#">Faithless Enhancements</a>
-                    <div class="dropdown-content">
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/cit.zip')">CIT</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/consistency.zip')">Consistency</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/halloween.zip')">Halloween</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/ogtextures.zip')">OGTextures</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/tlou.zip')">TLoU</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/vanillactm.zip')">VanillaCTM</a>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-item">
-                <a href="ModSelector.html">ModdedAssets</a>
-            </div>
-        </nav>
     </header>
 
-    <div>
-        <h2>Welcome to the Minecraft Resource Pack Homepage</h2>
-        <p>This website provides information about the Faithless resource pack and its enhancements. Faithless is a high-quality texture pack designed for Minecraft, offering an enhanced visual experience.</p>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#">Faithless</a></li>
+            <li><a href="#">Faithless Enhancements</a></li>
+            <li><a href="#">ModdedAssets</a></li>
+        </ul>
     </div>
+
+    <div class="content">
+        <h2>Welcome to the Minecraft Resource Pack Homepage</h2>
+        <p>This website provides information about the Faithless resource pack and its enhancements. Faithless is a high-quality texture pack designed for Minecraft, offering an enhanced visual experience for players. Explore the various options below to customize your Minecraft gameplay.</p>
+    </div>
+
+    <div class="ribbon">
+        <div class="ribbon-item">
+            <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">Faithless (CurseForge)</a>
+        </div>
+        <div class="ribbon-item">
+            <a href="https://modrinth.com/resourcepack/faithless">Faithless (Modrinth)</a>
+        </div>
+        <div class="ribbon-item dropdown">
+            <a href="#">Faithless Enhancements</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/cit.zip')">CIT</a>
+                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/consistency.zip')">Consistency</a>
+                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/halloween.zip')">Halloween</a>
+                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/ogtextures.zip')">OGTextures</a>
+                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/tlou.zip')">TLoU</a>
+                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/vanillactm.zip')">VanillaCTM</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadFile(url) {
+            // Logic to download the file
+        }
+    </script>
 </body>
 </html>
