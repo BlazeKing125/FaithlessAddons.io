@@ -8,6 +8,9 @@
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -52,6 +55,7 @@
         }
 
         .content {
+            flex: 1;
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -59,33 +63,32 @@
             border-radius: 10px;
         }
 
-        .ribbon {
-            background-color: #555;
+        .menu-bar {
+            background-color: #000;
             color: #fff;
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            margin-top: 20px;
-            border-radius: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
-        .ribbon-item {
-            margin-right: 20px;
-        }
-
-        .ribbon-item a {
+        .discord-button {
+            background-color: #7289DA;
             color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 8px;
+            border: none;
+            padding: 10px 20px;
             border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
             transition: background-color 0.3s ease;
+            margin-left: 10px;
         }
 
-        .ribbon-item a:hover {
-            background-color: #444;
+        .discord-button:hover {
+            background-color: #6272A4;
         }
     </style>
 </head>
@@ -107,24 +110,8 @@
         <p>This website provides information about the Faithless resource pack and its enhancements. Faithless is a high-quality texture pack designed for Minecraft, offering an enhanced visual experience for players. Explore the various options below to customize your Minecraft gameplay.</p>
     </div>
 
-    <div class="ribbon">
-        <div class="ribbon-item">
-            <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">Faithless (CurseForge)</a>
-        </div>
-        <div class="ribbon-item">
-            <a href="https://modrinth.com/resourcepack/faithless">Faithless (Modrinth)</a>
-        </div>
-        <div class="ribbon-item dropdown">
-            <a href="#">Faithless Enhancements</a>
-            <div class="dropdown-content">
-                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/cit.zip')">CIT</a>
-                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/consistency.zip')">Consistency</a>
-                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/halloween.zip')">Halloween</a>
-                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/ogtextures.zip')">OGTextures</a>
-                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/tlou.zip')">TLoU</a>
-                <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/vanillactm.zip')">VanillaCTM</a>
-            </div>
-        </div>
+    <div class="menu-bar">
+        <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
     </div>
 
     <script>
