@@ -51,6 +51,43 @@
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
+
+        .container {
+            display: flex;
+        }
+
+        .options {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .selection {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .selected-items {
+            margin-top: 20px;
+        }
+
+        .selected-items p {
+            margin: 5px 0;
+        }
+
+        .download-button {
+            margin-top: 20px;
+        }
     </style>
     <script>
         function updateSelectedItems() {
@@ -117,6 +154,7 @@
             <div id="selected-items-display" class="selected-items">
                 <!-- Selected items will be displayed here -->
             </div>
+            <button class="download-button">Download</button>
         </div>
     </div>
 </body>
