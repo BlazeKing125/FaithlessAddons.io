@@ -61,40 +61,58 @@
             border-radius: 10px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
 
         .mod-item {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            padding: 10px;
             margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .mod-image {
-            max-width: 200px;
-            max-height: 200px;
+            padding: 10px;
         }
 
         .mod-name {
             font-weight: bold;
-            margin-top: 10px;
+            margin-left: 10px;
         }
 
         .selected-mods {
             margin-top: 20px;
             text-align: center;
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        .selected-mods p {
-            margin: 5px;
+        .selected-mods h2 {
+            margin-bottom: 10px;
+        }
+
+        .selected-mods ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .selected-mods li {
+            margin-bottom: 5px;
         }
 
         .download-button {
             margin-top: 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #333;
         }
 
         .menu-bar {
@@ -102,19 +120,11 @@
             color: #fff;
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        .menu-bar .left-menu {
-            display: flex;
-        }
-
-        .menu-bar .right-menu {
-            display: flex;
         }
 
         .discord-button {
@@ -131,16 +141,6 @@
 
         .discord-button:hover {
             background-color: #6272A4;
-        }
-
-        /* Responsive layout */
-        @media screen and (max-width: 600px) {
-            .selector {
-                padding: 10px;
-            }
-            .mod-item {
-                margin-bottom: 10px;
-            }
         }
     </style>
 </head>
@@ -159,28 +159,27 @@
 
     <div class="selector">
         <div class="mod-item">
-            <img src="image1.jpg" alt="Mod Image 1" class="mod-image">
-            <div class="mod-name">Mod 1</div>
             <input type="checkbox" id="mod1" name="mod1" value="mod1">
+            <label for="mod1" class="mod-name">Mod 1</label>
         </div>
 
         <div class="mod-item">
-            <img src="image2.jpg" alt="Mod Image 2" class="mod-image">
-            <div class="mod-name">Mod 2</div>
             <input type="checkbox" id="mod2" name="mod2" value="mod2">
+            <label for="mod2" class="mod-name">Mod 2</label>
         </div>
 
         <div class="mod-item">
-            <img src="image3.jpg" alt="Mod Image 3" class="mod-image">
-            <div class="mod-name">Mod 3</div>
             <input type="checkbox" id="mod3" name="mod3" value="mod3">
+            <label for="mod3" class="mod-name">Mod 3</label>
         </div>
 
         <!-- Add more mod items as needed -->
 
         <div class="selected-mods">
             <h2>Selected Mods</h2>
-            <p>No mods selected</p>
+            <ul id="selected-mods-list">
+                <li>No mods selected</li>
+            </ul>
         </div>
 
         <button class="download-button">Download</button>
@@ -189,12 +188,51 @@
     <div class="menu-bar">
         <div class="left-menu">
             <a href="#">Faithless</a>
-            <a href="#">Faithless Enhancements</a>
+            <div class="dropdown">
+                <a href="#">Faithless Enhancements</a>
+                <div class="dropdown-content">
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/CIT.zip">CIT</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/Consistency.zip">Consistency</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/Halloween.zip">Halloween</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/OGTextures.zip">OGTextures</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/TLoU.zip">TLoU</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/VanillaCTM.zip">VanillaCTM</a>
+                </div>
+            </div>
         </div>
         <div class="right-menu">
-            <a href="#">ModdedAssets</a>
+            <a href="ModSelector.html">ModdedAssets</a>
             <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
         </div>
     </div>
+
+    <script>
+        // JavaScript logic to handle mod selection and download
+        const modItems = document.querySelectorAll('.mod-item input');
+        const selectedModsList = document.getElementById('selected-mods-list');
+        const downloadButton = document.querySelector('.download-button');
+
+        modItems.forEach((modItem) => {
+            modItem.addEventListener('change', (event) => {
+                const modName = event.target.nextElementSibling.textContent;
+                if (event.target.checked) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = modName;
+                    selectedModsList.appendChild(listItem);
+                } else {
+                    const modToRemove = Array.from(selectedModsList.children).find((li) => li.textContent === modName);
+                    if (modToRemove) {
+                        selectedModsList.removeChild(modToRemove);
+                    }
+                }
+            });
+        });
+
+        downloadButton.addEventListener('click', () => {
+            const selectedMods = Array.from(selectedModsList.children).map((li) => li.textContent);
+            console.log('Selected Mods:', selectedMods);
+            // Add logic to handle the download action
+        });
+    </script>
 </body>
 </html>
