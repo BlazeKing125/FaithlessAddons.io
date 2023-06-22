@@ -59,6 +59,42 @@
             background-color: #f2f2f2;
             padding: 20px;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mod-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .mod-image {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        .mod-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .selected-mods {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .selected-mods p {
+            margin: 5px;
+        }
+
+        .download-button {
+            margin-top: 20px;
         }
 
         .menu-bar {
@@ -88,6 +124,16 @@
         .discord-button:hover {
             background-color: #6272A4;
         }
+
+        /* Responsive layout */
+        @media screen and (max-width: 600px) {
+            .selector {
+                padding: 10px;
+            }
+            .mod-item {
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,9 +150,32 @@
     </div>
 
     <div class="selector">
-        <h2>Select the Mods</h2>
-        <p>Choose the mods you want to include in your Minecraft gameplay:</p>
-        <!-- Add your selector options here -->
+        <div class="mod-item">
+            <img src="image1.jpg" alt="Mod Image 1" class="mod-image">
+            <div class="mod-name">Mod 1</div>
+            <input type="checkbox" id="mod1" name="mod1" value="mod1">
+        </div>
+
+        <div class="mod-item">
+            <img src="image2.jpg" alt="Mod Image 2" class="mod-image">
+            <div class="mod-name">Mod 2</div>
+            <input type="checkbox" id="mod2" name="mod2" value="mod2">
+        </div>
+
+        <div class="mod-item">
+            <img src="image3.jpg" alt="Mod Image 3" class="mod-image">
+            <div class="mod-name">Mod 3</div>
+            <input type="checkbox" id="mod3" name="mod3" value="mod3">
+        </div>
+
+        <!-- Add more mod items as needed -->
+
+        <div class="selected-mods">
+            <h2>Selected Mods</h2>
+            <p>No mods selected</p>
+        </div>
+
+        <button class="download-button">Download</button>
     </div>
 
     <div class="menu-bar">
