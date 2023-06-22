@@ -51,21 +51,21 @@
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
-
-        /* Ribbon styling */
-        .ribbon {
-            background-color: #555;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .ribbon-item {
-            margin-right: 20px;
-        }
     </style>
+    <script>
+        function updateSelectedItems() {
+            var selectedItems = document.querySelectorAll('input[name="item"]:checked');
+            var selectedItemsDisplay = document.getElementById('selected-items-display');
+            selectedItemsDisplay.innerHTML = '';
+
+            selectedItems.forEach(function(item) {
+                var itemName = item.value;
+                var paragraph = document.createElement('p');
+                paragraph.textContent = itemName;
+                selectedItemsDisplay.appendChild(paragraph);
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -98,18 +98,6 @@
             </div>
         </nav>
     </header>
-
-    <div class="ribbon">
-        <div class="ribbon-item">
-            <a href="#">Create</a>
-        </div>
-        <div class="ribbon-item">
-            <a href="#">Supplementaries</a>
-        </div>
-        <div class="ribbon-item">
-            <a href="#">Waystones</a>
-        </div>
-    </div>
 
     <div class="container">
         <div class="options">
