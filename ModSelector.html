@@ -102,11 +102,19 @@
             color: #fff;
             padding: 10px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        .menu-bar .left-menu {
+            display: flex;
+        }
+
+        .menu-bar .right-menu {
+            display: flex;
         }
 
         .discord-button {
@@ -179,7 +187,14 @@
     </div>
 
     <div class="menu-bar">
-        <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
+        <div class="left-menu">
+            <a href="#">Faithless</a>
+            <a href="#">Faithless Enhancements</a>
+        </div>
+        <div class="right-menu">
+            <a href="#">ModdedAssets</a>
+            <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
+        </div>
     </div>
 </body>
 </html>
