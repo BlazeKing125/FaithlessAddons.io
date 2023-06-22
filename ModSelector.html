@@ -60,9 +60,9 @@
             padding: 20px;
             border-radius: 10px;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .mod-item {
@@ -70,31 +70,26 @@
             flex-direction: column;
             align-items: center;
             padding: 10px;
-            margin-bottom: 20px;
+            margin: 10px;
             text-align: center;
+            max-width: 200px;
+            box-sizing: border-box;
         }
 
         .mod-image {
-            max-width: 200px;
+            max-width: 100%;
             max-height: 200px;
+            margin-bottom: 10px;
         }
 
         .mod-name {
             font-weight: bold;
-            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
-        .selected-mods {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .selected-mods p {
-            margin: 5px;
-        }
-
-        .download-button {
-            margin-top: 20px;
+        .mod-selector {
+            display: flex;
+            align-items: center;
         }
 
         .menu-bar {
@@ -127,11 +122,8 @@
 
         /* Responsive layout */
         @media screen and (max-width: 600px) {
-            .selector {
-                padding: 10px;
-            }
             .mod-item {
-                margin-bottom: 10px;
+                flex-basis: calc(100% - 20px);
             }
         }
     </style>
@@ -153,29 +145,29 @@
         <div class="mod-item">
             <img src="image1.jpg" alt="Mod Image 1" class="mod-image">
             <div class="mod-name">Mod 1</div>
-            <input type="checkbox" id="mod1" name="mod1" value="mod1">
+            <div class="mod-selector">
+                <input type="checkbox" id="mod1" name="mod1" value="mod1">
+            </div>
         </div>
 
         <div class="mod-item">
             <img src="image2.jpg" alt="Mod Image 2" class="mod-image">
             <div class="mod-name">Mod 2</div>
-            <input type="checkbox" id="mod2" name="mod2" value="mod2">
+            <div class="mod-selector">
+                <input type="checkbox" id="mod2" name="mod2" value="mod2">
+            </div>
         </div>
 
         <div class="mod-item">
             <img src="image3.jpg" alt="Mod Image 3" class="mod-image">
             <div class="mod-name">Mod 3</div>
-            <input type="checkbox" id="mod3" name="mod3" value="mod3">
+            <div class="mod-selector">
+                <input type="checkbox" id="mod3" name="mod3" value="mod3">
+            </div>
         </div>
 
         <!-- Add more mod items as needed -->
 
-        <div class="selected-mods">
-            <h2>Selected Mods</h2>
-            <p>No mods selected</p>
-        </div>
-
-        <button class="download-button">Download</button>
     </div>
 
     <div class="menu-bar">
