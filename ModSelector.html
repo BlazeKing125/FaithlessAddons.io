@@ -54,18 +54,20 @@
 
         .container {
             display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
         }
 
         .options {
-            flex: 1;
-            padding: 20px;
+            width: 200px;
+            border-right: 1px solid #ddd;
+            padding-right: 20px;
         }
 
         .selection {
             flex: 1;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
+            padding-left: 20px;
         }
 
         h2 {
@@ -79,10 +81,9 @@
 
         .selected-items {
             margin-top: 20px;
-        }
-
-        .selected-items p {
-            margin: 5px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            min-height: 200px;
         }
 
         .download-button {
@@ -151,7 +152,7 @@
         </div>
         <div class="selection">
             <h2>Selected Items</h2>
-            <div id="selected-items-display" class="selected-items">
+            <div class="selected-items" id="selected-items-display">
                 <!-- Selected items will be displayed here -->
             </div>
             <button class="download-button">Download</button>
