@@ -1,162 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minecraft Resource Pack - Mod Selector</title>
+    <title>Minecraft Resource Pack Homepage - Mod Selector</title>
     <style>
         /* CSS styling for the page */
         body {
             margin: 0;
             padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
-            background-color: #333;
+            background-color: #303030;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav-bar {
+            background-color: #000;
             color: #fff;
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
-        .nav-item {
-            display: inline-block;
+        .nav-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-bar li {
             margin-right: 20px;
         }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #000;
-            padding: 12px 16px;
+        .nav-bar a {
+            color: #fff;
             text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px;
-        }
-
-        .options {
-            width: 200px;
-            border-right: 1px solid #ddd;
-            padding-right: 20px;
-        }
-
-        .selection {
-            flex: 1;
-            padding-left: 20px;
-        }
-
-        h2 {
-            margin-top: 0;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .selected-items {
-            margin-top: 20px;
-            border: 1px solid #ddd;
+            font-size: 16px;
+            font-weight: bold;
             padding: 10px;
-            min-height: 200px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        .download-button {
-            margin-top: 20px;
+        .nav-bar a:hover {
+            background-color: #555;
+        }
+
+        .selector {
+            flex: 1;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .menu-bar {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .discord-button {
+            background-color: #7289DA;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .discord-button:hover {
+            background-color: #6272A4;
         }
     </style>
-    <script>
-        function updateSelectedItems() {
-            var selectedItems = document.querySelectorAll('input[name="item"]:checked');
-            var selectedItemsDisplay = document.getElementById('selected-items-display');
-            selectedItemsDisplay.innerHTML = '';
-
-            selectedItems.forEach(function(item) {
-                var itemName = item.value;
-                var paragraph = document.createElement('p');
-                paragraph.textContent = itemName;
-                selectedItemsDisplay.appendChild(paragraph);
-            });
-        }
-    </script>
 </head>
 <body>
     <header>
-        <h1>Minecraft Resource Pack Homepage</h1>
-        <nav>
-            <div class="nav-item">
-                <div class="dropdown">
-                    <a href="#">Faithless</a>
-                    <div class="dropdown-content">
-                        <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">CurseForge</a>
-                        <a href="https://modrinth.com/resourcepack/faithless">Modrinth</a>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-item">
-                <div class="dropdown">
-                    <a href="#">Faithless Enhancements</a>
-                    <div class="dropdown-content">
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/cit.zip')">CIT</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/consistency.zip')">Consistency</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/halloween.zip')">Halloween</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/ogtextures.zip')">OGTextures</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/tlou.zip')">TLoU</a>
-                        <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/your-username/repository/main/Enhancements/Changes/vanillactm.zip')">VanillaCTM</a>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-item">
-                <a href="ModSelector.html">ModdedAssets</a>
-            </div>
-        </nav>
+        <h1>Minecraft Resource Pack Homepage - Mod Selector</h1>
     </header>
 
-    <div class="container">
-        <div class="options">
-            <h2>Select Options</h2>
-            <label>
-                <input type="checkbox" name="item" value="Create" onclick="updateSelectedItems()"> Create
-            </label>
-            <label>
-                <input type="checkbox" name="item" value="Supplementaries" onclick="updateSelectedItems()"> Supplementaries
-            </label>
-            <label>
-                <input type="checkbox" name="item" value="Waystones" onclick="updateSelectedItems()"> Waystones
-            </label>
-        </div>
-        <div class="selection">
-            <h2>Selected Items</h2>
-            <div class="selected-items" id="selected-items-display">
-                <!-- Selected items will be displayed here -->
-            </div>
-            <button class="download-button">Download</button>
-        </div>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#">Create</a></li>
+            <li><a href="#">Supplementaries</a></li>
+            <li><a href="#">Waystones</a></li>
+        </ul>
+    </div>
+
+    <div class="selector">
+        <h2>Select the Mods</h2>
+        <p>Choose the mods you want to include in your Minecraft gameplay:</p>
+        <!-- Add your selector options here -->
+    </div>
+
+    <div class="menu-bar">
+        <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
     </div>
 </body>
 </html>
