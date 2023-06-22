@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft Resource Pack - Custom Selection</title>
+    <style>
+        /* CSS styling for the page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .options {
+            width: 200px;
+            border-right: 1px solid #ddd;
+            padding-right: 20px;
+        }
+
+        .selection {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .selected-items {
+            margin-top: 20px;
+        }
+
+        .selected-items p {
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        function updateSelectedItems() {
+            var selectedItems = document.querySelectorAll('input[name="item"]:checked');
+            var selectedItemsDisplay = document.getElementById('selected-items-display');
+            selectedItemsDisplay.innerHTML = '';
+
+            selectedItems.forEach(function(item) {
+                var itemName = item.value;
+                var paragraph = document.createElement('p');
+                paragraph.textContent = itemName;
+                selectedItemsDisplay.appendChild(paragraph);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="options">
+            <h2>Select Options</h2>
+            <label>
+                <input type="checkbox" name="item" value="Create" onclick="updateSelectedItems()"> Create
+            </label>
+            <label>
+                <input type="checkbox" name="item" value="Supplementaries" onclick="updateSelectedItems()"> Supplementaries
+            </label>
+            <label>
+                <input type="checkbox" name="item" value="Waystones" onclick="updateSelectedItems()"> Waystones
+            </label>
+        </div>
+        <div class="selection">
+            <h2>Selected Items</h2>
+            <div id="selected-items-display" class="selected-items">
+                <!-- Selected items will be displayed here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
