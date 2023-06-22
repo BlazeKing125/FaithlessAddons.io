@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minecraft Resource Pack Homepage - Mod Selector</title>
+    <title>Minecraft Resource Pack Homepage</title>
     <style>
         /* CSS styling for the page */
         body {
@@ -54,10 +54,42 @@
             background-color: #555;
         }
 
-        .selector {
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .content {
             flex: 1;
-            background-color: #f2f2f2;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #f2f2f2;
             border-radius: 10px;
         }
 
@@ -92,33 +124,46 @@
 </head>
 <body>
     <header>
-        <h1>Minecraft Resource Pack Homepage - Mod Selector</h1>
+        <h1>Minecraft Resource Pack Homepage</h1>
     </header>
 
     <div class="nav-bar">
         <ul>
-            <li><a href="#">Create</a></li>
-            <li><a href="#">Supplementaries</a></li>
-            <li><a href="#">Waystones</a></li>
+            <li class="dropdown">
+                <a href="#">Faithless</a>
+                <div class="dropdown-content">
+                    <a href="https://www.curseforge.com/minecraft/texture-packs/faithless">CurseForge</a>
+                    <a href="https://modrinth.com/resourcepack/faithless">Modrinth</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Faithless Enhancements</a>
+                <div class="dropdown-content">
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/CIT.zip">CIT</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/Consistency.zip">Consistency</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/Halloween.zip">Halloween</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/OGTextures.zip">OGTextures</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/TLoU.zip">TLoU</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/VanillaCTM.zip">VanillaCTM</a>
+                </div>
+            </li>
+            <li><a href="#">ModdedAssets</a></li>
         </ul>
     </div>
 
-    <div class="selector">
-        <h2>Select the Mods</h2>
-        <p>Choose the mods you want to include in your Minecraft gameplay:</p>
-        <input type="checkbox" id="mod1" name="mod1" value="mod1">
-        <label for="mod1">Mod 1</label><br>
-        <input type="checkbox" id="mod2" name="mod2" value="mod2">
-        <label for="mod2">Mod 2</label><br>
-        <input type="checkbox" id="mod3" name="mod3" value="mod3">
-        <label for="mod3">Mod 3</label><br>
-        <!-- Add more mod selector checkboxes here -->
-
-        <button type="button">Download</button>
+    <div class="content">
+        <h2>Welcome to the Minecraft Resource Pack Homepage</h2>
+        <p>This website provides information about the Faithless resource pack and its enhancements. Faithless is a high-quality texture pack designed for Minecraft, offering an enhanced visual experience for players. Explore the various options below to customize your Minecraft gameplay.</p>
     </div>
 
     <div class="menu-bar">
         <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
     </div>
+
+    <script>
+        function downloadFile(url) {
+            // Logic to download the file
+        }
+    </script>
 </body>
 </html>
