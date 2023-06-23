@@ -60,14 +60,11 @@ body {
 }
 
 /* Add modern styles for the bottom ribbon */
-.bottom-container {
-  flex: 1;
-}
-
 .content {
+  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .bottom-ribbon {
@@ -92,13 +89,6 @@ body {
 }
 
 /* Add styles for the logo */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 .logo {
   max-width: 100%;
   max-height: 100%;
