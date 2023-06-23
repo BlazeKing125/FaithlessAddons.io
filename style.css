@@ -85,32 +85,24 @@ body {
   background-color: #627AAD;
 }
 
-/* Add styles for the logo */
+/* Add styles for the Mod Selector page */
 .content {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
+  padding: 20px;
 }
-
-.logo {
-  max-width: 100%;
-  height: auto;
-  max-height: 80vh;
-  width: auto;
-}
-
-/* Add additional modern styles for the rest of the website */
 
 .left-side {
   flex: 4;
-  padding: 0 20px;
+  padding-right: 20px;
+  overflow: auto;
 }
 
 .options-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .option {
@@ -141,36 +133,6 @@ body {
 .display-box {
   background-color: #ffffff;
   padding: 20px;
-}
-
-.selected-option {
-  margin-bottom: 20px;
-}
-
-.download-button {
-  background-color: #7289DA;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-  background-color: #627AAD;
-}
-
-.option-name {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.display-box {
-  background-color: #ffffff;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,4 +148,19 @@ body {
   margin-bottom: 10px;
   text-align: center;
   font-size: 16px;
+}
+
+.download-button {
+  background-color: #7289DA;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #627AAD;
 }
