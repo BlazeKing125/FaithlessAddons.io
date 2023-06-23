@@ -93,32 +93,11 @@ body {
 
 /* Add styles for the logo */
 .logo {
-  display: block;
   max-width: 100%;
   height: auto;
   margin: 20px auto;
+  width: 80%;
+  max-height: 80vh;
 }
 
-@media screen and (max-width: 768px) {
-  /* Adjust the logo size for smaller screens */
-  .logo {
-    max-width: 80%;
-    margin: 10px auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  /* Further adjust the logo size for smaller screens */
-  .logo {
-    max-width: 60%;
-    margin: 5px auto;
-  }
-}
-
-/* Dynamically center the logo on the page */
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
+/* Add additional modern styles for the rest of the website */
