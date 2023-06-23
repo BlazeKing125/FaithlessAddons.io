@@ -64,10 +64,6 @@ body {
   background-color: #1a1a1a;
   padding: 10px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .discord-button {
@@ -85,24 +81,21 @@ body {
   background-color: #627AAD;
 }
 
-/* Add styles for the Mod Selector page */
+/* Add styles for the content */
 .content {
   display: flex;
-  flex: 1;
-  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .left-side {
-  flex: 4;
-  padding-right: 20px;
-  overflow: auto;
+  flex-basis: 80%;
+  padding: 20px;
 }
 
 .options-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  padding-bottom: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
 
 .option {
@@ -127,12 +120,13 @@ body {
 }
 
 .right-side {
-  flex: 1;
-}
-
-.display-box {
-  background-color: #ffffff;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
+  background-color: #ffffff;
 }
 
 .selected-option {
