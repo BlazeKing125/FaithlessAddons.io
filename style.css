@@ -169,6 +169,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.option:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .option label {
@@ -186,31 +195,26 @@ body {
   margin-bottom: 10px;
 }
 
-.option input {
-  margin-top: auto;
-  align-self: center;
+.option-name {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
 }
 
-.option-name {
-  text-align: center;
-  font-size: 16px;
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .display-box {
   background-color: #ffffff;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .selected-options {
   margin-bottom: 20px;
-}
-
-.selected-options span {
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
   font-size: 16px;
 }
