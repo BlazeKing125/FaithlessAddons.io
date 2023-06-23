@@ -1,0 +1,95 @@
+/* CSS styling for all pages */
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  background-color: #303030;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation */
+.nav-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-bar li {
+  margin-right: 20px;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  background-color: #555;
+}
+
+/* Content container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background-color: #7289DA;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #6272A4;
+}
+
+/* Footer */
+footer {
+  background-color: #303030;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
