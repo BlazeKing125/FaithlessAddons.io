@@ -161,3 +161,9 @@ body {
 .download-button:hover {
   background-color: #627AAD;
 }
+
+.option-name {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+}
