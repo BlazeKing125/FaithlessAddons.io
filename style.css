@@ -101,3 +101,63 @@ body {
 }
 
 /* Add additional modern styles for the rest of the website */
+
+.left-side {
+  flex: 4;
+  padding: 0 20px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.right-side {
+  flex: 1;
+}
+
+.display-box {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.selected-option {
+  margin-bottom: 20px;
+}
+
+.download-button {
+  background-color: #7289DA;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #627AAD;
+}
