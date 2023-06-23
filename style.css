@@ -12,31 +12,10 @@ body {
   margin: 0;
 }
 
-/* Add modern styles for the main container */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Add modern styles for the logo */
-.logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.logo img {
-  height: auto;
-  max-width: 100%;
-  transition: all 0.3s ease;
-}
-
 /* Add modern styles for the top ribbon */
 .top-ribbon {
   background-color: #1a1a1a;
   padding: 10px;
-  text-align: center;
 }
 
 .top-ribbon:hover {
@@ -110,12 +89,29 @@ body {
 
 /* Add additional modern styles for the rest of the website */
 h1 {
-  display: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-p.description {
+p {
   font-size: 16px;
   line-height: 1.5;
-  margin: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome-section {
   text-align: center;
 }
+
