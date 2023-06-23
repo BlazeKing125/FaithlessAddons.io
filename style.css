@@ -9,15 +9,13 @@ body, h1, p, button {
 body {
   background-color: #f2f2f2;
   color: #333333;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Add modern styles for the top ribbon */
 .top-ribbon {
   background-color: #1a1a1a;
   padding: 10px;
+  text-align: center;
 }
 
 .ribbon-buttons {
@@ -84,66 +82,15 @@ body {
 /* Add styles for the content */
 .content {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.left-side {
-  flex-basis: 80%;
-  padding: 20px;
-}
-
-.options-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
-}
-
-.option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.option label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-
-.option img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.right-side {
-  flex-basis: 20%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background-color: #ffffff;
+  height: 100vh;
 }
 
-.selected-option {
-  margin-bottom: 20px;
-}
-
-.download-button {
-  background-color: #7289DA;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-  background-color: #627AAD;
+.logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  width: auto;
 }
