@@ -109,15 +109,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.option:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .option label {
@@ -128,35 +119,24 @@ body {
 }
 
 .option img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   max-height: 200px;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
-.option-name {
-  margin-top: 5px;
-  text-align: center;
-  font-size: 14px;
-}
-
 .right-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
 }
 
 .display-box {
   background-color: #ffffff;
   padding: 20px;
-  text-align: center;
 }
 
-.selected-options {
+.selected-option {
   margin-bottom: 20px;
-  font-size: 16px;
 }
 
 .download-button {
