@@ -1,95 +1,81 @@
-/* CSS styling for all pages */
-
-/* Global styles */
-body {
+/* Reset default browser styles */
+body, h1, p, button {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+/* Set a modern color scheme */
+body {
+  background-color: #f2f2f2;
+  color: #333333;
 }
 
-/* Header */
-header {
-  background-color: #303030;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Navigation */
-.nav-bar {
-  background-color: #000;
-  color: #fff;
+/* Add modern styles for the top ribbon */
+.top-ribbon {
+  background-color: #1a1a1a;
   padding: 10px;
+}
+
+.ribbon-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.nav-bar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav-bar li {
-  margin-right: 20px;
-}
-
-.nav-bar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-bar a:hover {
-  background-color: #555;
-}
-
-/* Content container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Buttons */
-.button {
+.dropdown {
+  position: relative;
   display: inline-block;
-  background-color: #7289DA;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  margin: 0 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #6272A4;
-}
-
-/* Footer */
-footer {
-  background-color: #303030;
-  color: #fff;
-  padding: 20px;
+/* Add modern styles for the bottom ribbon */
+.bottom-ribbon {
+  background-color: #1a1a1a;
+  padding: 10px;
   text-align: center;
 }
 
-/* Responsive layout */
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 10px;
-  }
+.discord-button {
+  background-color: #7289DA;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.discord-button:hover {
+  background-color: #627AAD;
+}
+
+/* Add additional modern styles for the rest of the website */
