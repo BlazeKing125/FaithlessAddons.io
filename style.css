@@ -12,22 +12,28 @@ body {
   margin: 0;
 }
 
-/* Add modern styles for the top ribbon */
-.top-logo {
+/* Add modern styles for the main container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add modern styles for the logo */
+.logo {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.logo {
-  height: auto;
-  width: 100px;
-  margin-right: 10px;
+.logo img {
+  height: 50px; /* Adjust the height as needed */
+  width: auto;
 }
 
+/* Add modern styles for the top ribbon */
 .top-ribbon {
   background-color: #1a1a1a;
   padding: 10px;
-  flex-grow: 1;
 }
 
 .ribbon-buttons {
