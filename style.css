@@ -122,7 +122,17 @@ body {
 }
 
 .selected-options {
-  margin-top: 20px;
+  flex-basis: 20%;
+  margin-left: 20px;
+}
+
+.selected-options-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.selected-option {
+  margin-bottom: 5px;
 }
 
 .download-button {
