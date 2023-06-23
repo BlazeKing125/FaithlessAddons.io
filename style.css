@@ -37,6 +37,8 @@ body {
   background-color: #1a1a1a;
   padding: 10px;
   text-align: center;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .top-ribbon:hover {
@@ -73,7 +75,7 @@ body {
   background-color: transparent;
   border: none;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -119,4 +121,3 @@ p.description {
   margin: 20px;
   text-align: center;
 }
-
