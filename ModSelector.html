@@ -31,45 +31,45 @@
     </div>
 
     <div class="content">
-        <div class="left-side">
-            <div class="options-grid">
-                <div class="option">
-                    <label>
-                        <input type="checkbox">
-                        <img src="image1.jpg" alt="Option 1">
-                    </label>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="image1.jpg" alt="Create">
+                <div class="option-text">Create</div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="createCheckbox">
+                    <label class="checkbox-label" for="createCheckbox">Create</label>
                 </div>
-                <div class="option">
-                    <label>
-                        <input type="checkbox">
-                        <img src="image2.jpg" alt="Option 2">
-                    </label>
-                </div>
-                <div class="option">
-                    <label>
-                        <input type="checkbox">
-                        <img src="image3.jpg" alt="Option 3">
-                    </label>
-                </div>
-                <!-- Add more options as needed -->
             </div>
-        </div>
-        <div class="right-side">
-            <div class="display-box">
-                <div class="selected-option">
-                    <!-- Selected option content will appear here -->
+            <div class="grid-item">
+                <img src="image2.jpg" alt="AppleSkin">
+                <div class="option-text">AppleSkin</div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="appleSkinCheckbox">
+                    <label class="checkbox-label" for="appleSkinCheckbox">AppleSkin</label>
                 </div>
-                <button class="download-button">Download</button>
             </div>
+            <div class="grid-item">
+                <img src="image3.jpg" alt="Waystones">
+                <div class="option-text">Waystones</div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="waystonesCheckbox">
+                    <label class="checkbox-label" for="waystonesCheckbox">Waystones</label>
+                </div>
+            </div>
+            <!-- Add more grid items as needed -->
         </div>
+        <div class="display-area">
+            <!-- Selected options will appear here -->
+        </div>
+        <button class="download-button">Download</button>
     </div>
 
-    <div class="bottom-container">
-        <div class="bottom-ribbon">
-            <a href="https://discord.gg/pUGKZNpd34" target="_blank">
-                <button class="discord-button">Join our Discord</button>
-            </a>
-        </div>
+    <div class="bottom-ribbon">
+        <a href="https://discord.gg/pUGKZNpd34" target="_blank">
+            <button class="discord-button">Join our Discord</button>
+        </a>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
