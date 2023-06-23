@@ -167,3 +167,23 @@ body {
   text-align: center;
   font-size: 14px;
 }
+
+.display-box {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-options {
+  margin-bottom: 20px;
+}
+
+.selected-options span {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
