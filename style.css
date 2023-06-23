@@ -26,8 +26,8 @@ body {
 }
 
 .logo img {
-  height: 50px; /* Adjust the height as needed */
-  width: auto;
+  height: auto;
+  max-width: 100%;
 }
 
 /* Add modern styles for the top ribbon */
