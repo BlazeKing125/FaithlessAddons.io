@@ -1,177 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minecraft Resource Pack Homepage - Mod Selector</title>
-    <style>
-        /* CSS styling for the page */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #303030;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .nav-bar {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-bar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        .nav-bar li {
-            margin-right: 20px;
-        }
-
-        .nav-bar a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-bar a:hover {
-            background-color: #555;
-        }
-
-        .selector {
-            flex: 1;
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .mod-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            margin: 10px;
-            text-align: center;
-            max-width: 200px;
-            box-sizing: border-box;
-        }
-
-        .mod-image {
-            max-width: 100%;
-            max-height: 200px;
-            margin-bottom: 10px;
-        }
-
-        .mod-name {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .mod-selector {
-            display: flex;
-            align-items: center;
-        }
-
-        .menu-bar {
-            background-color: #000;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .discord-button {
-            background-color: #7289DA;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin-left: 10px;
-        }
-
-        .discord-button:hover {
-            background-color: #6272A4;
-        }
-
-        /* Responsive layout */
-        @media screen and (max-width: 600px) {
-            .mod-item {
-                flex-basis: calc(100% - 20px);
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Minecraft Resource Pack Homepage - Mod Selector</h1>
-    </header>
-
-    <div class="nav-bar">
-        <ul>
-            <li><a href="#">Create</a></li>
-            <li><a href="#">Supplementaries</a></li>
-            <li><a href="#">Waystones</a></li>
-        </ul>
+    <div class="top-ribbon">
+        <div class="ribbon-buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Faithless</button>
+                <div class="dropdown-content">
+                    <a href="https://www.curseforge.com/minecraft/texture-packs/faithless" target="_blank">CurseForge</a>
+                    <a href="https://modrinth.com/resourcepack/faithless" target="_blank">Modrinth</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Faithless Enhancements</button>
+                <div class="dropdown-content">
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/CIT.zip" target="_blank">CIT</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/Consistency.zip" target="_blank">Consistency</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/Halloween.zip" target="_blank">Halloween</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/OGTextures.zip" target="_blank">OGTextures</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/TLoU.zip" target="_blank">TLoU</a>
+                    <a href="https://raw.githubusercontent.com/BlazeKing125/FaithlessAddons.io/main/Enhancements%3AChanges/VanillaCTM.zip" target="_blank">VanillaCTM</a>
+                </div>
+            </div>
+            <a href="ModSelector.html">
+                <button class="dropbtn">Modded Assets</button>
+            </a>
+        </div>
     </div>
 
-    <div class="selector">
-        <div class="mod-item">
-            <img src="image1.jpg" alt="Mod Image 1" class="mod-image">
-            <div class="mod-name">Mod 1</div>
-            <div class="mod-selector">
-                <input type="checkbox" id="mod1" name="mod1" value="mod1">
-            </div>
-        </div>
-
-        <div class="mod-item">
-            <img src="image2.jpg" alt="Mod Image 2" class="mod-image">
-            <div class="mod-name">Mod 2</div>
-            <div class="mod-selector">
-                <input type="checkbox" id="mod2" name="mod2" value="mod2">
-            </div>
-        </div>
-
-        <div class="mod-item">
-            <img src="image3.jpg" alt="Mod Image 3" class="mod-image">
-            <div class="mod-name">Mod 3</div>
-            <div class="mod-selector">
-                <input type="checkbox" id="mod3" name="mod3" value="mod3">
-            </div>
-        </div>
-
-        <!-- Add more mod items as needed -->
-
+    <div class="content">
+        <!-- Add your content for the Mod Selector page here -->
     </div>
 
-    <div class="menu-bar">
-        <a class="discord-button" href="https://discord.gg/example">Join our Discord</a>
+    <div class="bottom-container">
+        <div class="bottom-ribbon">
+            <a href="https://discord.gg/pUGKZNpd34" target="_blank">
+                <button class="discord-button">Join our Discord</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>
