@@ -82,23 +82,22 @@ body {
 /* Add styles for the content */
 .content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  height: 100vh;
+  padding: 20px;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
-  padding: 20px;
 }
 
 .grid-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 
 .grid-item img {
@@ -122,9 +121,8 @@ body {
   margin-left: 5px;
 }
 
-.display-area {
+.selected-options {
   margin-top: 20px;
-  font-weight: bold;
 }
 
 .download-button {
