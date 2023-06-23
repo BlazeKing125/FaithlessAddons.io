@@ -128,7 +128,7 @@ body {
 }
 
 .option img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   max-height: 200px;
   object-fit: cover;
