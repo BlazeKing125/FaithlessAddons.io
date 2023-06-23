@@ -9,12 +9,25 @@ body, h1, p, button {
 body {
   background-color: #f2f2f2;
   color: #333333;
+  margin: 0;
 }
 
 /* Add modern styles for the top ribbon */
+.top-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+  width: 100px;
+  margin-right: 10px;
+}
+
 .top-ribbon {
   background-color: #1a1a1a;
   padding: 10px;
+  flex-grow: 1;
 }
 
 .ribbon-buttons {
@@ -61,6 +74,10 @@ body {
   background-color: #1a1a1a;
   padding: 10px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .discord-button {
