@@ -9,15 +9,13 @@ body, h1, p, button {
 body {
   background-color: #f2f2f2;
   color: #333333;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Add modern styles for the top ribbon */
 .top-ribbon {
   background-color: #1a1a1a;
   padding: 10px;
+  text-align: center;
 }
 
 .ribbon-buttons {
@@ -84,8 +82,20 @@ body {
 /* Add styles for the content */
 .content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  width: auto;
+}
+
+/* Additional styles for ModSelector.html */
 
 .left-side {
   flex-basis: 80%;
