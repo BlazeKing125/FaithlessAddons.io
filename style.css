@@ -16,12 +16,27 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+/* Add modern styles for the logo */
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  height: auto;
+  max-width: 100%;
+  transition: all 0.3s ease;
 }
 
 /* Add modern styles for the top ribbon */
 .top-ribbon {
   background-color: #1a1a1a;
   padding: 10px;
+  text-align: center;
 }
 
 .top-ribbon:hover {
@@ -67,31 +82,6 @@ body {
   color: #e1e1e1;
 }
 
-/* Add modern styles for the welcome section */
-.welcome-container {
-  text-align: center;
-  margin: 20px;
-}
-
-.welcome-heading {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-.welcome-text {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
 /* Add modern styles for the bottom ribbon */
 .bottom-ribbon {
   background-color: #1a1a1a;
@@ -119,3 +109,14 @@ body {
 }
 
 /* Add additional modern styles for the rest of the website */
+h1 {
+  display: none;
+}
+
+p.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px;
+  text-align: center;
+}
+
