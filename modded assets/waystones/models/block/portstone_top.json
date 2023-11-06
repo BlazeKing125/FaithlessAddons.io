@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"texture": "waystones:block/andesite_waystone",
+		"particle": "block/andesite"
+	},
+	"elements": [
+		{
+			"name": "pillarTop",
+			"from": [3, 0, 9],
+			"to": [13, 7, 13],
+			"faces": {
+				"north": {"uv": [10.5, 0, 13, 3.5], "texture": "#texture"},
+				"east": {"uv": [12, 0, 13, 3.5], "texture": "#texture"},
+				"south": {"uv": [11, 9, 13.5, 12.5], "texture": "#texture"},
+				"west": {"uv": [10.5, 0, 11.5, 3.5], "texture": "#texture"},
+				"up": {"uv": [10.5, 0, 13, 2], "texture": "#texture"}
+			}
+		},
+		{
+			"name": "pillarTop",
+			"from": [4, 0, 7],
+			"to": [12, 2, 9],
+			"faces": {
+				"north": {"uv": [13, 0, 15, 1], "texture": "#texture"},
+				"east": {"uv": [14.5, 0, 15, 1], "texture": "#texture"},
+				"west": {"uv": [13, 0, 13.5, 1], "texture": "#texture"},
+				"up": {"uv": [13, 0, 15, 1], "texture": "#texture"}
+			}
+		}
+	]
+}
